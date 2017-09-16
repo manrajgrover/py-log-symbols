@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
+"""Provide log symbols for various log levels."""
 from enum import Enum
 from colorama import init, Fore
 import platform
 
 init(autoreset=True)
 
-MAIN = {
+_MAIN = {
     'info': 'ℹ',
     'success': '✔',
     'warning': '⚠',
     'error': '✖'
 }
 
-FALLBACKS = {
+_FALLBACKS = {
     'info': 'i',
     'success': '√',
     'warning': '‼',
@@ -21,6 +22,13 @@ FALLBACKS = {
 
 
 def is_supported():
+    """Check whether operating system supports main symbols or not.
+
+    Returns
+    -------
+    boolean
+        Whether operating system supports main symbols or not
+    """
     os_arch = platform.system() + str(platform.architecture()[0])
     os_name = platform.system() + platform.release()
 
@@ -34,11 +42,25 @@ def is_supported():
 
     return False
 
-SYMBOLS = MAIN if is_supported() else FALLBACKS
+_SYMBOLS = _MAIN if is_supported() else _FALLBACKS
 
 
 class LogSymbols(Enum):
-    INFO = Fore.BLUE + SYMBOLS['info']
-    SUCCESS = Fore.GREEN + SYMBOLS['success']
-    WARNING = Fore.YELLOW + SYMBOLS['warning']
-    ERROR = Fore.RED + SYMBOLS['error']
+    """LogSymbol enum class.
+
+    Attributes
+    ----------
+    ERROR : str
+        Colored error symbol
+    INFO : str
+        Colored info symbol
+    SUCCESS : str
+        Colored success symbol
+    WARNING : str
+        Colored warning symbol
+    """
+
+    INFO = Fore.BLUE + _SYMBOLS['info']
+    SUCCESS = Fore.GREEN + _SYMBOLS['success']
+    WARNING = Fore.YELLOW + _SYMBOLS['warning']
+    ERROR = Fore.RED + _SYMBOLS['error']
