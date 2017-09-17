@@ -62,7 +62,7 @@ class LogSymbols(Enum): # pylint: disable=too-few-public-methods
         Colored warning symbol
     """
 
-    INFO = Fore.BLUE + _SYMBOLS['info']
-    SUCCESS = Fore.GREEN + _SYMBOLS['success']
-    WARNING = Fore.YELLOW + _SYMBOLS['warning']
-    ERROR = Fore.RED + _SYMBOLS['error']
+    INFO = Fore.BLUE + _SYMBOLS['info'] + Fore.RESET
+    SUCCESS = Fore.GREEN + _SYMBOLS['success'] + Fore.RESET
+    WARNING = Fore.YELLOW + _SYMBOLS['warning'] + Fore.RESET
+    ERROR = Fore.RED + _SYMBOLS['error'] + Fore.RESET
