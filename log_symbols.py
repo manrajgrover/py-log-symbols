@@ -39,10 +39,6 @@ def is_supported():
     """
 
     os_arch = platform.system() + str(platform.architecture()[0])
-    os_name = platform.system() + platform.release()
-
-    logging.debug(os_arch)
-    logging.debug(os_name)
 
     if os_arch != 'Windows32bit':
         return True
