@@ -19,7 +19,7 @@ def strip_ansi(string):
     str
         Encoding free string
     """
-    pattern = '(\x1b\[|\x9b)[^@-_]*[@-_]|\x1b[@-_]'
+    pattern = r'(\x1b\[|\x9b)[^@-_]*[@-_]|\x1b[@-_]'
     return re.sub(pattern, '', string, flags=re.I)
 
 
@@ -32,7 +32,21 @@ class TestLogSymbols(unittest.TestCase):
             strip_ansi(LogSymbols.SUCCESS.value) in ('✔', '√')
         )
 
+        self.assertTrue(
+            strip_ansi(LogSymbols.INFO.value) in ('ℹ', 'i')
+        )
+
+        self.assertTrue(
+            strip_ansi(LogSymbols.WARNING.value) in ('⚠', '‼')
+        )
+
+        print strip_ansi(LogSymbols.ERROR.value)
+
+        self.assertTrue(
+            strip_ansi(LogSymbols.ERROR.value) in ('✖', '×')
+        )
+
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestLogSymbols)
-    unittest.TextTestRunner(verbosity=2).run(suite)
+    SUITE = unittest.TestLoader().loadTestsFromTestCase(TestLogSymbols)
+    unittest.TextTestRunner(verbosity=2).run(SUITE)

@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Provide log symbols for various log levels."""
+import platform
+
 from enum import Enum
 from colorama import init, Fore
-import platform
 
 init(autoreset=True)
 
@@ -34,18 +35,19 @@ def is_supported():
 
     print os_name
 
-    if os_arch is not 'Windows32bit':
+    if os_arch == 'Windows32bit':
         return True
 
-    if os_name is 'Windows10':
+    if os_name == 'Windows10':
         return True
 
     return False
 
+
 _SYMBOLS = _MAIN if is_supported() else _FALLBACKS
 
 
-class LogSymbols(Enum):
+class LogSymbols(Enum): # pylint: disable=too-few-public-methods
     """LogSymbol enum class.
 
     Attributes
