@@ -40,8 +40,6 @@ class TestLogSymbols(unittest.TestCase):
             strip_ansi(LogSymbols.WARNING.value) in ('⚠', '‼')
         )
 
-        print strip_ansi(LogSymbols.ERROR.value)
-
         self.assertTrue(
             strip_ansi(LogSymbols.ERROR.value) in ('✖', '×')
         )
