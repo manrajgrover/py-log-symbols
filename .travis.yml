@@ -7,4 +7,4 @@ install:
   - pip install -r requirements-dev.txt
 script:
   - pylint --errors-only --rcfile=.pylintrc --output-format=colorized *.py
-  - nosetests --cover-package=log_symbols --with-coverage --cover-erase  --cover-html --cover-branches
+  - nosetests --cover-package=log_symbols --with-coverage --cover-erase  --cover-html --cover-branches --nologcapture
