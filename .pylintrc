@@ -22,7 +22,7 @@ init-hook="exec 'aW1wb3J0IHN5cywgb3MKCmlmICdWSVJUVUFMX0VOVicgbm90IGluIG9zLmVudml
      JykKCiMgRml4IGZvciB3aW5kb3dzCmlmIG5vdCBvcy5wYXRoLmV4aXN0cyhhY3RpdmF0ZV90aGlz \
      KToKICAgIGFjdGl2YXRlX3RoaXMgPSBvcy5wYXRoLmpvaW4ob3MucGF0aC5qb2luKHZlX2Rpciwg \
      J1NjcmlwdHMnKSwgJ2FjdGl2YXRlX3RoaXMucHknKQoKZXhlY2ZpbGUoYWN0aXZhdGVfdGhpcywg \
-     ZGljdChfX2ZpbGVfXz1hY3RpdmF0ZV90aGlzKSkK'.decode('utf-8')"
+     ZGljdChfX2ZpbGVfXz1hY3RpdmF0ZV90aGlzKSkK'.decode('base64')"
 
 # Use multiple processes to speed up Pylint.
 jobs=1
