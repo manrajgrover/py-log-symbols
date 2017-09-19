@@ -5,6 +5,13 @@ import platform
 from enum import Enum
 from colorama import init, Fore
 
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s:%(levelname)s:%(message)s"
+)
+
 init(autoreset=True)
 
 _MAIN = {
@@ -32,7 +39,6 @@ def is_supported():
     """
 
     os_arch = platform.system() + str(platform.architecture()[0])
-    os_name = platform.system() + platform.release()
 
     if os_arch != 'Windows32bit':
         return True
