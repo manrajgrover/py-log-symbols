@@ -3,7 +3,7 @@
 import re
 import unittest
 
-from log_symbols import LogSymbols
+from log_symbols.symbols import LogSymbols
 
 
 def strip_ansi(string):
