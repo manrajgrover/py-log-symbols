@@ -10,8 +10,9 @@ def dependencies(file):
 
 setup(
     name='log_symbols',
-    packages=find_packages(exclude=('tests',)),
-    version='0.0.4',
+    packages=find_packages(exclude=('tests', 'examples')),
+    version='0.0.6',
+    license='MIT',
     description='Colored symbols for various log levels for Python',
     long_description=readme(),
     author='Manraj Singh',
@@ -23,5 +24,6 @@ setup(
         'log'
     ],
     install_requires=dependencies('requirements.txt'),
-    tests_require=dependencies('requirements-dev.txt')
+    tests_require=dependencies('requirements-dev.txt'),
+    include_package_data=True
 )
