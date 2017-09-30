@@ -29,15 +29,15 @@ class TestLogSymbols(unittest.TestCase):
     def test_symbols(self):
         """Test the symbols in LogSymbol enum."""
         self.assertTrue(
-            strip_ansi(LogSymbols.SUCCESS.value) in ('✔', '√')
+            strip_ansi(LogSymbols.SUCCESS.value) in ('✔', 'v')
         )
 
         self.assertTrue(
-            strip_ansi(LogSymbols.INFO.value) in ('ℹ', 'i')
+            strip_ansi(LogSymbols.INFO.value) in ('ℹ', '¡')
         )
 
         self.assertTrue(
-            strip_ansi(LogSymbols.WARNING.value) in ('⚠', '‼')
+            strip_ansi(LogSymbols.WARNING.value) in ('⚠', '!!')
         )
 
         self.assertTrue(

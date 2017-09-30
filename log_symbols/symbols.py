@@ -22,9 +22,9 @@ _MAIN = {
 }
 
 _FALLBACKS = {
-    'info': 'i',
-    'success': '√',
-    'warning': '‼',
+    'info': '¡',
+    'success': 'v',
+    'warning': '!!',
     'error': '×'
 }
 
