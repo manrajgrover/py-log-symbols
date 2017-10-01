@@ -6,7 +6,7 @@
 
 > Colored symbols for various log levels for Python
 
-[![Build Status](https://travis-ci.org/ManrajGrover/py-log-symbols.svg?branch=master)](https://travis-ci.org/ManrajGrover/py-log-spymbols) [![Build status](https://ci.appveyor.com/api/projects/status/muwkaxtptfu30c6t?svg=true)](https://ci.appveyor.com/project/ManrajGrover/py-log-symbols) [![PyPI](https://img.shields.io/pypi/v/log_symbols.svg)](https://github.com/ManrajGrover/py-log-symbols) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
+[![Build Status](https://travis-ci.org/ManrajGrover/py-log-symbols.svg?branch=master)](https://travis-ci.org/ManrajGrover/py-log-symbols) [![Build status](https://ci.appveyor.com/api/projects/status/muwkaxtptfu30c6t?svg=true)](https://ci.appveyor.com/project/ManrajGrover/py-log-symbols) [![PyPI](https://img.shields.io/pypi/v/log_symbols.svg)](https://github.com/ManrajGrover/py-log-symbols) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
 
 ## Install
@@ -37,4 +37,4 @@ Also, share the [project](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgit
 * [log-symbols](https://github.com/sindresorhus/log-symbols)
 
 ## License
-[MIT](https://github.com/ManrajGrover/py-spinners/blob/master/LICENSE) © Manraj Singh
+[MIT](https://github.com/ManrajGrover/py-log-symbols/blob/master/LICENSE) © Manraj Singh
