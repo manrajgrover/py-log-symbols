@@ -11,7 +11,7 @@ def dependencies(file):
 setup(
     name='log_symbols',
     packages=find_packages(exclude=('tests', 'examples')),
-    version='0.0.8',
+    version='0.0.9',
     license='MIT',
     description='Colored symbols for various log levels for Python',
     long_description=readme(),
