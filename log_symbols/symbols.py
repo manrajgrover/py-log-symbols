@@ -5,13 +5,6 @@ import platform
 from enum import Enum
 from colorama import init, Fore
 
-import logging
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s:%(levelname)s:%(message)s"
-)
-
 init(autoreset=True)
 
 _MAIN = {
