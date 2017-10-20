@@ -3,7 +3,7 @@
 import platform
 
 from enum import Enum
-from colorama import init, Fore
+from colorama import init, deinit, Fore
 
 init(autoreset=True)
 
@@ -61,3 +61,5 @@ class LogSymbols(Enum): # pylint: disable=too-few-public-methods
     SUCCESS = Fore.GREEN + _SYMBOLS['success'] + Fore.RESET
     WARNING = Fore.YELLOW + _SYMBOLS['warning'] + Fore.RESET
     ERROR = Fore.RED + _SYMBOLS['error'] + Fore.RESET
+
+deinit()
