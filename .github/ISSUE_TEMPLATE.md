@@ -17,7 +17,7 @@
 - Operating System:
 - Terminal in use:
 - Python version:
-- Halo version:
+- Log Symbol version:
 - `pip freeze` output:
 
 ### Error
