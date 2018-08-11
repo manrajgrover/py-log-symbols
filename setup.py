@@ -20,10 +20,10 @@ setup(
     version='0.0.13',
     license='MIT',
     description='Colored symbols for various log levels for Python',
-    long_description='Colored symbols for various log levels for Python. Find the documentation here: https://github.com/ManrajGrover/py-log-symbols.',
+    long_description='Colored symbols for various log levels for Python. Find the documentation here: https://github.com/manrajgrover/py-log-symbols.',
     author='Manraj Singh',
     author_email='manrajsinghgrover@gmail.com',
-    url='https://github.com/ManrajGrover/py-log-symbols',
+    url='https://github.com/manrajgrover/py-log-symbols',
     keywords=[
         'log symbols',
         'symbols',
