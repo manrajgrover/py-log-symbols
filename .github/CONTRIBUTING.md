@@ -1,5 +1,9 @@
 # How to contribute?
 
+## Development Guidelines
+
+Please read [development guidelines](https://github.com/manrajgrover/py-log-symbols/blob/master/DEVELOPMENT.md) in order to setup development environment and run tests.
+
 ## Steps to contribute
 
 * Look for a issue or open a new one in [project issues](https://github.com/manrajgrover/py-log-symbols/issues)
