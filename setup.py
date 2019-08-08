@@ -2,8 +2,6 @@ import sys
 
 from setuptools import setup, find_packages  # pylint: disable=no-name-in-module,import-error
 
-install_requires = []
-
 def dependencies(file):
     with open(file) as f:
         return f.read().splitlines()
@@ -24,7 +22,7 @@ setup(
         'symbols',
         'log'
     ],
-    install_requires=dependencies('requirements.txt') + install_requires,   
+    install_requires=dependencies('requirements.txt'),   
     extras_require={
         ':python_version < "3.4"': [
             'enum34==1.1.6',
