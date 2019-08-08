@@ -4,7 +4,7 @@ init:
 clone_depth: 5
 
 cache:
-  # - '%LOCALAPPDATA%\pip\Cache'
+  - '%LOCALAPPDATA%\pip\Cache'
 
 environment:
   fast_finish: true
@@ -13,12 +13,6 @@ environment:
       TOXPYTHON: C:\Python27\python.exe
       PYTHON_HOME: C:\Python27
       PYTHON_VERSION: '2.7'
-      PYTHON_ARCH: '32'
-
-    - TOXENV: 'py34'
-      TOXPYTHON: C:\Python34\python.exe
-      PYTHON_HOME: C:\Python34
-      PYTHON_VERSION: '3.4'
       PYTHON_ARCH: '32'
 
     - TOXENV: 'py35'
