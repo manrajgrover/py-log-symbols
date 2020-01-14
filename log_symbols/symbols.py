@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Provide log symbols for various log levels."""
 import platform
+import os
 
 from enum import Enum
 from colorama import init, deinit, Fore
@@ -33,7 +34,7 @@ def is_supported():
 
     os_arch = platform.system()
 
-    if os_arch != 'Windows':
+    if os_arch != 'Windows' or os.environ.get('WT_SESSION') is not None:
         return True
 
     return False
