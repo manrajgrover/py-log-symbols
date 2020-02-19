@@ -10,7 +10,7 @@ def dependencies(file):
 setup(
     name='log_symbols',
     packages=find_packages(exclude=('tests', 'examples')),
-    version='0.0.13',
+    version='0.0.14',
     license='MIT',
     description='Colored symbols for various log levels for Python',
     long_description='Colored symbols for various log levels for Python. Find the documentation here: https://github.com/manrajgrover/py-log-symbols.',
