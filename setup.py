@@ -22,7 +22,6 @@ setup(
         'symbols',
         'log'
     ],
-    install_requires=dependencies('requirements.txt'),   
     extras_require={
         ':python_version < "3.4"': [
             'enum34==1.1.6',
