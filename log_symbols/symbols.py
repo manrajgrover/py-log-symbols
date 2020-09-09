@@ -3,9 +3,6 @@
 import platform
 
 from enum import Enum
-from colorama import init, deinit, Fore
-
-init(autoreset=True)
 
 _MAIN = {
     'info': 'ℹ',
@@ -42,6 +39,16 @@ def is_supported():
 _SYMBOLS = _MAIN if is_supported() else _FALLBACKS
 
 
+def _ansi_code(code):
+    return '\033[' + str(code) + 'm'
+
+_RED = _ansi_code(31)
+_GREEN = _ansi_code(32)
+_YELLOW = _ansi_code(33)
+_BLUE = _ansi_code(34)
+_RESET = _ansi_code(39)
+
+
 class LogSymbols(Enum): # pylint: disable=too-few-public-methods
     """LogSymbol enum class.
 
@@ -57,9 +64,7 @@ class LogSymbols(Enum): # pylint: disable=too-few-public-methods
         Colored warning symbol
     """
 
-    INFO = Fore.BLUE + _SYMBOLS['info'] + Fore.RESET
-    SUCCESS = Fore.GREEN + _SYMBOLS['success'] + Fore.RESET
-    WARNING = Fore.YELLOW + _SYMBOLS['warning'] + Fore.RESET
-    ERROR = Fore.RED + _SYMBOLS['error'] + Fore.RESET
-
-deinit()
+    INFO = _BLUE + _SYMBOLS['info'] + _RESET
+    SUCCESS = _GREEN + _SYMBOLS['success'] + _RESET
+    WARNING = _YELLOW + _SYMBOLS['warning'] + _RESET
+    ERROR = _RED + _SYMBOLS['error'] + _RESET
